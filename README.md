@@ -1,10 +1,4 @@
-# what-s-app-chatbot
-
-Request
-
-{
-  `path`: `C:/WhatsAppAutoReply/README.md`,
-  `content`: `# WhatsApp Auto Reply Bot 🤖
+# WhatsApp Auto Reply Bot 🤖
 
 An intelligent Python bot that automatically replies to WhatsApp messages with AI-powered contextual responses.
 
@@ -78,31 +72,31 @@ python whatsapp_auto_reply.py
 The bot recognizes and replies to:
 
 ### 1. **Birthday Wishes** 🎂
-- Keywords: \"happy birthday\", \"HBD\", \"birthday\"
+- Keywords: "happy birthday", "HBD", "birthday"
 - Replies: Thank you messages with emojis
 
 ### 2. **Good Morning** ☀️
-- Keywords: \"good morning\", \"GM\", \"morning\"
+- Keywords: "good morning", "GM", "morning"
 - Replies: Morning wishes and greetings
 
 ### 3. **Good Night** 🌙
-- Keywords: \"good night\", \"GN\", \"night\"
+- Keywords: "good night", "GN", "night"
 - Replies: Night wishes and sleep well messages
 
 ### 4. **Festival Wishes** 🎊
-- Keywords: \"happy diwali\", \"eid mubarak\", \"merry christmas\"
+- Keywords: "happy diwali", "eid mubarak", "merry christmas"
 - Replies: Festival-specific responses
 
 ### 5. **New Year** 🎆
-- Keywords: \"happy new year\", \"new year\"
+- Keywords: "happy new year", "new year"
 - Replies: New year wishes
 
 ### 6. **Congratulations** 🎉
-- Keywords: \"congratulations\", \"congrats\", \"well done\"
+- Keywords: "congratulations", "congrats", "well done"
 - Replies: Thank you and appreciation
 
 ### 7. **Get Well Soon** 💚
-- Keywords: \"get well soon\", \"feel better\"
+- Keywords: "get well soon", "feel better"
 - Replies: Acknowledgment and thanks
 
 ## ⚙️ Configuration
@@ -114,8 +108,8 @@ Edit the `response_templates` dictionary in `whatsapp_auto_reply.py`:
 ```python
 self.response_templates = {
     'birthday': [
-        \"Thank you so much! 🎂\",
-        \"Thanks! Your wishes made my day! 🎉\",
+        "Thank you so much! 🎂",
+        "Thanks! Your wishes made my day! 🎉",
         # Add more custom responses here
     ],
     # ... other categories
@@ -157,11 +151,11 @@ All auto-replies are saved in `message_history.json`:
 ```json
 [
   {
-    \"timestamp\": \"2025-01-03T10:30:00\",
-    \"contact\": \"John Doe\",
-    \"received\": \"Happy Birthday!\",
-    \"type\": \"birthday\",
-    \"sent\": \"Thank you so much! 🎂 Your wishes made my day special! 🎉\"
+    "timestamp": "2025-01-03T10:30:00",
+    "contact": "John Doe",
+    "received": "Happy Birthday!",
+    "type": "birthday",
+    "sent": "Thank you so much! 🎂 Your wishes made my day special! 🎉"
   }
 ]
 ```
@@ -232,13 +226,13 @@ Add real AI-powered responses using Claude or GPT:
 from anthropic import Anthropic
 
 def generate_ai_reply(self, message):
-    client = Anthropic(api_key=\"your-api-key\")
+    client = Anthropic(api_key="your-api-key")
     response = client.messages.create(
-        model=\"claude-sonnet-4-20250514\",
+        model="claude-sonnet-4-20250514",
         max_tokens=100,
         messages=[{
-            \"role\": \"user\",
-            \"content\": f\"Generate a friendly reply to: {message}\"
+            "role": "user",
+            "content": f"Generate a friendly reply to: {message}"
         }]
     )
     return response.content[0].text
@@ -320,4 +314,3 @@ Potential features to add:
 **Remember**: Use this bot ethically and responsibly! 🙏
 
 **Happy Automating!** 🤖✨
-`

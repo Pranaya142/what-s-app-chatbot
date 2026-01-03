@@ -1,0 +1,8 @@
+# Requirements for WhatsApp Auto Reply Bot
+
+selenium>=4.15.0
+webdriver-manager>=4.0.1
+
+# Optional for AI-powered responses (advanced)
+# openai>=1.0.0
+# anthropic>=0.18.0
